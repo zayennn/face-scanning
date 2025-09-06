@@ -95,11 +95,9 @@ def main():
         print("[ERROR] Gagal membuka kamera/video. Coba --camera 0 atau cek izin kamera.")
         return
 
-    # For FPS
     prev_time = time.time()
     fps = 0.0
 
-    # Simple smoothing: history per "track". Since we don't track IDs, we use one global history.
     history = deque(maxlen=5)
 
     window_name = "Deteksi Emosi (q untuk keluar)"
