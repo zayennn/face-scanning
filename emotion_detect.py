@@ -18,7 +18,6 @@ def map_emotions(fer_emotions: dict) -> str:
     for k in ["happy", "neutral", "sad"]:
         fer_emotions.setdefault(k, 0.0)
 
-    # Choose among the three we care about
     scores = {
         "tersenyum": fer_emotions.get("happy", 0.0),
         "datar": fer_emotions.get("neutral", 0.0),
