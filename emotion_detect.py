@@ -63,7 +63,6 @@ def draw_label(frame, box, label: str, score: float):
     x, y = max(0, x), max(0, y)
     color = ID2COLOR.get(label, (255, 255, 255))
 
-    # Rectangle
     cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
 
     text = f"{label} ({int(score*100)}%)"
@@ -71,8 +70,6 @@ def draw_label(frame, box, label: str, score: float):
     cv2.rectangle(frame, (x, y - th - 8), (x + tw + 8, y), color, -1)
     cv2.putText(frame, text, (x + 4, y - 6),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 2, cv2.LINE_AA)
-
-
 
 def main():
     parser = argparse.ArgumentParser(description="Deteksi emosi wajah (sedih/datar/tersenyum) real-time.")
