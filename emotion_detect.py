@@ -14,11 +14,7 @@ ID2COLOR = {
 }
 
 def map_emotions(fer_emotions: dict) -> str:
-    """
-    Map FER's emotion scores to our 3 labels.
-    If 'happy', 'neutral', or 'sad' exists, choose the max of those three.
-    Otherwise, map to the closest among our three using a simple heuristic.
-    """
+
     for k in ["happy", "neutral", "sad"]:
         fer_emotions.setdefault(k, 0.0)
 
