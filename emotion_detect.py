@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-"""
-Real-time face emotion detector (sedih, datar, tersenyum) using your webcam.
-
-Usage:
-  python emotion_detect.py            # uses default camera 0
-  python emotion_detect.py --camera 1 # choose another camera index
-  python emotion_detect.py --video path/to/video.mp4  # run on a video file
-  Press 'q' to quit.
-"""
-
 import argparse
 from collections import deque, Counter
 import time
