@@ -7,8 +7,6 @@ import numpy as np
 from fer import FER
 
 
-# --- Helpers -----------------------------------------------------------------
-
 ID2COLOR = {
     "sedih": (60, 60, 255),       # red-ish
     "datar": (200, 200, 200),     # gray
