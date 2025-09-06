@@ -104,7 +104,6 @@ def main():
             if best_label is not None:
                 history.append(best_label)
 
-        # Show a smoothed label banner (optional, gives a stable global reading)
         smoothed = smooth_label(history)
         banner = f"Terbaca: {smoothed}"
         (tw, th), _ = cv2.getTextSize(banner, cv2.FONT_HERSHEY_SIMPLEX, 0.8, 2)
