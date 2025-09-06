@@ -66,7 +66,6 @@ def draw_label(frame, box, label: str, score: float):
     # Rectangle
     cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
 
-    # Label background
     text = f"{label} ({int(score*100)}%)"
     (tw, th), _ = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.6, 2)
     cv2.rectangle(frame, (x, y - th - 8), (x + tw + 8, y), color, -1)
@@ -74,7 +73,6 @@ def draw_label(frame, box, label: str, score: float):
                 cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 2, cv2.LINE_AA)
 
 
-# --- Main --------------------------------------------------------------------
 
 def main():
     parser = argparse.ArgumentParser(description="Deteksi emosi wajah (sedih/datar/tersenyum) real-time.")
