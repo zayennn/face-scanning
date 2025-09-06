@@ -89,8 +89,8 @@ def main():
             best_score = 0.0
 
             for r in results:
-                box = r["box"]  # (x, y, w, h)
-                emotions = r["emotions"]  # dict of scores
+                box = r["box"]
+                emotions = r["emotions"]
 
                 label = map_emotions(emotions)
                 score = max(emotions.get("happy", 0), emotions.get("neutral", 0), emotions.get("sad", 0))
