@@ -86,7 +86,6 @@ def main():
     parser.add_argument("--show-fps", action="store_true", help="Tampilkan FPS di layar")
     args = parser.parse_args()
 
-    # FER with OpenCV detector (no extra mtcnn dep needed)
     detector = FER(mtcnn=False)
 
     cap = cv2.VideoCapture(args.video if args.video else args.camera)
