@@ -80,7 +80,6 @@ def main():
         if not ok:
             break
 
-        # FER expects RGB
         rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         # FER returns list of dicts with 'box' and 'emotions'
