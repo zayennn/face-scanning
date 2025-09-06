@@ -110,7 +110,6 @@ def main():
         cv2.rectangle(frame, (10, 10), (10 + tw + 10, 10 + th + 14), (30, 30, 30), -1)
         cv2.putText(frame, banner, (16, 10 + th + 4), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2)
 
-        # FPS
         if args.show_fps:
             now = time.time()
             fps = 1.0 / (now - prev_time)
