@@ -24,8 +24,6 @@ def map_emotions(fer_emotions: dict) -> str:
         "sedih": fer_emotions.get("sad", 0.0),
     }
 
-    # If FER predicted something else (e.g., 'angry', 'fear'), it will still
-    # have low nonzero scores on our trio; this keeps the label stable.
     return max(scores, key=scores.get)
 
 
