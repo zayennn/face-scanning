@@ -85,7 +85,6 @@ def main():
         results = detector.detect_emotions(rgb)
 
         if results:
-            # Aggregate the strongest face (highest happy/neutral/sad max score) for smoothing
             best_label = None
             best_score = 0.0
 
@@ -96,11 +95,9 @@ def main():
                 label = map_emotions(emotions)
                 score = max(emotions.get("happy", 0), emotions.get("neutral", 0), emotions.get("sad", 0))
 
-                # Draw only if above threshold
                 if score >= args.min_conf:
                     draw_label(frame, box, label, score)
 
-                # Track best for global smoothing
                 if score > best_score:
                     best_label, best_score = label, score
 
