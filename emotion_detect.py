@@ -8,9 +8,9 @@ from fer import FER
 
 
 ID2COLOR = {
-    "sedih": (60, 60, 255),       # red-ish
-    "datar": (200, 200, 200),     # gray
-    "tersenyum": (60, 200, 60),   # green-ish
+    "sedih": (60, 60, 255),
+    "datar": (200, 200, 200),
+    "tersenyum": (60, 200, 60),
 }
 
 def map_emotions(fer_emotions: dict) -> str:
