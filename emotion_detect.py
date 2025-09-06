@@ -82,10 +82,8 @@ def main():
 
         rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-        # FER returns list of dicts with 'box' and 'emotions'
         results = detector.detect_emotions(rgb)
 
-        # Draw results
         if results:
             # Aggregate the strongest face (highest happy/neutral/sad max score) for smoothing
             best_label = None
