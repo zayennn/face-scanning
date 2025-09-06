@@ -89,7 +89,6 @@ def main():
     # FER with OpenCV detector (no extra mtcnn dep needed)
     detector = FER(mtcnn=False)
 
-    # Video source
     cap = cv2.VideoCapture(args.video if args.video else args.camera)
     if not cap.isOpened():
         print("[ERROR] Gagal membuka kamera/video. Coba --camera 0 atau cek izin kamera.")
